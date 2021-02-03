@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+body {
+  display: flexbox;
+  margin: 0 auto;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fa-bars {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 1em;
+  color: grey;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fa-bars:hover{
+  cursor: pointer;
+  text-decoration: none;
+  animation: Logo-spin 1s;
+  animation-iteration-count: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes Logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
+}
+
+/* form decoration */
+.fade-group {
+  display: flex;
+  justify-content: center;
+}
+
+/* warning message if nothing is typed in the creation */
+.warning {
+  display: none;
+}
+
+.warning-show {
+  font-size: 12px;
+  color: red;
+}
+
+/* card css */
+.card {
+  width: 18rem;
+  margin: 10px;
+}
+
+.card-group{
+  display: inline-grid;
+}
+
+/* trash bin logo */
+
+.fa-trash {
+  text-align: right;
+  cursor: pointer;
 }
